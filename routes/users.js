@@ -1,8 +1,10 @@
 var express = require('express');
-var router = express.Router();
 var fs = require('fs');
+var router = express.Router();
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+
   let userData = fs.readFileSync('./users.json');
   var siteUsers = JSON.parse(userData);
 
@@ -12,3 +14,4 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+

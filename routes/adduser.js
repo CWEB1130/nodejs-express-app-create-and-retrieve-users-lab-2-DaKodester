@@ -1,13 +1,14 @@
 var express = require('express');
+var router = express.Router();
 var fs = require('fs');
 var user = require('../model/user.js');
-var router = express.Router();
 
 /* Create User */
 router.post('/', function(req, res, next) {
 
     //Using the data model user from user.js
-    user.lastName = req.body.fname;
+    user.firstName = req.body.fname;
+    user.lastName = req.body.lname;
     user.email = req.body.email;
     user.password = req.body.password;
   
