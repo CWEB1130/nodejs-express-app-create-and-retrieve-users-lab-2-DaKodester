@@ -7,8 +7,7 @@ var router = express.Router();
 router.post('/', function(req, res, next) {
 
     //Using the data model user from user.js
-    user.firstName = req.body.fname;
-    user.lastName = req.body.lname;
+    user.lastName = req.body.fname;
     user.email = req.body.email;
     user.password = req.body.password;
   
