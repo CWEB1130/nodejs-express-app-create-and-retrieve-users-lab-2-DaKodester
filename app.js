@@ -8,7 +8,7 @@ var logger = require('morgan');
 // Lab 2 Routes
 var createUserRouter = require('./routes/createuser'); 
 var addUserRouter = require('./routes/adduser');
-
+var deleteuserRouter = require ('./routes/delete')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Lab 2 Routes
 app.use('/createuser', createUserRouter); 
 app.use('/adduser', addUserRouter);
-
+app.use('/users/:firstName', deleteuserRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
